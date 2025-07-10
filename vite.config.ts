@@ -1,24 +1,13 @@
-import { defineConfig } from 'vite';
-import glsl from 'vite-plugin-glsl';
+import { defineConfig } from 'vite'
+import glsl from 'vite-plugin-glsl'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
+  root: 'docs',
+  base: './',
+  publicDir: 'assets',
   plugins: [glsl(), tailwindcss()],
-  css: {
-    postcss: './postcss.config.js'
-  },
   build: {
-    lib: {
-      entry: 'src/main.js',
-      name: 'balatroButton',
-      fileName: 'balatro-button',
-      formats: ['es', 'umd']
-    },
-    rollupOptions: {
-      external: [],
-      output: {
-      exports: 'named'
-    }
-    }
+    outDir: '../dist'
   }
 })

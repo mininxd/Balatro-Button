@@ -17,7 +17,7 @@ let i = 0
 const balatroBtnInterval = setInterval(() => {
   i += 250
   balatroBtn.setPower(i)
-  if (i === 10000) clearInterval(balatroBtnInterval)
+  if (i === 5000) clearInterval(balatroBtnInterval)
 }, 50)
 
 

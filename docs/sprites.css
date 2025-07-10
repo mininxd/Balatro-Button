@@ -8,7 +8,7 @@
   height: 190px;
   transform: scale(1);
   
-  background-image: url('assets/Jokers.png');
+  background-image: url('/Jokers.png');
   background-repeat: no-repeat;
   background-size: 1420px 3040px;
 }

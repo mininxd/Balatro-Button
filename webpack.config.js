@@ -9,7 +9,7 @@ export default {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'balatrobutton.js',
+    filename: 'index.js',
     library: {
       type: 'module',
     },

@@ -7,9 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-  <style>   
-  @import "tailwindcss";  
-  </style>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body id="body" class="relative bg-black ">
@@ -26,6 +25,9 @@
     </div>
 
 
+<div class="bg-[#00b4] mt-6 text-2xl flex justify-center gap-2">
+  TailwindCSS Required!
+</div>
 
 <p class="text-2xl mt-24">
  use with cdn
@@ -36,13 +38,14 @@
 <span class="font-jetbrains text-gray-100 opacity-80">click to copy</span>
 
 
-<p class="text-2xl mt-4">
+<p class="text-2xl mt-6">
  NPM
 </p>
 <div class="copy px-2 py-1 w-full h-[28px] shadow-2xl bg-indigo-900 font-jetbrains rounded overflow-y-hidden">
   npm install balatrobutton
 </div>
 <span class="font-jetbrains text-gray-100 opacity-80">click to copy</span>
+
 
 
 <p class="mt-12 text-2xl">Quick Start:</p>
@@ -56,7 +59,7 @@
     selector: '.className',     <span class="text-gray-100 opacity-80">// your element classes</span><br>
     duration: 0,     <span class="text-gray-100 opacity-80">// flame duration, (default 0 = infinite)</span><br>
     power : () => 500,    <span class="text-gray-100 opacity-80">// flame power</span><br>
-    score : 0,     <span class="text-gray-100 opacity-80">// Initial content (inside element)</span><br>
+    score : 0,     <span class="text-gray-100 opacity-80">// Initial content</span><br>
     colorStart : "#f00",     <span class="text-gray-100 opacity-80">// Low power</span><br>
     colorMid : "#f50",     <span class="text-gray-100 opacity-80">// Medium power</span><br>
     colorEnd : "#ff0",     <span class="text-gray-100 opacity-80">// High power</span><br>
@@ -73,7 +76,7 @@
     
     <span class="text-gray-100 opacity-80">// Get fire colors</span><br>
     console.log(elementBtn.getColors());<br>
-    <span class="text-gray-100 opacity-80">// Change Power</span><br>
+    <span class="text-gray-100 opacity-80">// Change power</span><br>
     elementBtn.setPower(5000);<br>
     <span class="text-gray-100 opacity-80">// Change score</span><br>
     elementBtn.setScore(5000);<br>
@@ -87,7 +90,7 @@
     made with ❤️ </p>
 
  </div>
-  <script type="module" src="/docs/main.js"></script>
+  <script type="module" src="/main.js"></script>
 </body>
 
-</htmlang>
+</html>
