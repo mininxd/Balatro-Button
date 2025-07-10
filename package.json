@@ -3,6 +3,7 @@
   "version": "1.0.7",
   "description": "Balatro animated flame element",
   "type": "module",
+  "main": "dist/index.js",
   "module": "dist/index.js",
   "exports": {
     "import": "./dist/index.js"
@@ -15,7 +16,7 @@
     "preview": "vite preview",
     "build:js": "webpack --config webpack.config.js",
     "build:css": "tailwindcss -i ./src/style.css -o ./dist/style.css --minify",
-    "build": "npx vite build --emptyOutDir"
+    "build": "npx vite build"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
