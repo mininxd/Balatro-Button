@@ -16,50 +16,31 @@ npm install balatrobutton
 
 ```html
 <!-- Add buttons with the flame class -->
-<button class="btn-flame">Score: 0</button>
-<button class="btn-flame">Multiplier: 1x</button>
+<button class="btn-flame">0</button>
 ```
 
 ```javascript
 import FlameButton from 'balatrobutton';
 
-// Create flame effects for all buttons
+// Create flame effects for any buttons has "btn-flames" class
 const flameButtons = new FlameButton();
 
-// Or with custom options
+// Or with custom options, and custom classes
 const flameButtons = new FlameButton({
-  selector: '.my-flame-buttons',
-  colorStart: '#ff0000',
-  colorMid: '#ff5500',
-  colorEnd: '#ffff00',
-  power: () => 750,
-  score: 100
+  selector: '.my-flame-buttons', // class
+  colorStart: '#ff0000', // low power
+  colorMid: '#ff5500',  // mid power
+  colorEnd: '#ffff00', // high power
+  power: () => 750, // power that trigger fire
+  score: 100 // number text content
 });
 ```
 
-## Options
-
-All options are optional and have sensible defaults:
-
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `selector` | string | `'.btn-flame'` | CSS selector for buttons to enhance |
-| `duration` | number | `0` | Animation duration (0 = infinite) |
-| `power` | function | `() => 500` | Function returning flame intensity |
-| `score` | number | `0` | Initial score value |
-| `colorStart` | string | `'#f00'` | Starting flame color (hex) |
-| `colorMid` | string | `'#f50'` | Middle flame color (hex) |
-| `colorEnd` | string | `'#ff0'` | End flame color (hex) |
-
-## API Reference
-
 ### Constructor
-
 ```javascript
 new FlameButton(options)
 ```
-
-Creates flame effects for all elements matching the selector.
+Creates flame effects for all elements with "btn-flame" class by default.
 
 ### Methods
 
@@ -67,11 +48,12 @@ Creates flame effects for all elements matching the selector.
 Updates the score and optionally the flame power for the first button instance.
 
 ```javascript
-flameButtons.setScore(50);        // Add 50 to current score
+flameButtons.setScore(50);        // Add 50 to score
 flameButtons.setScore(100, 1000); // Add 100 to score and set power to 1000
 ```
 
 #### `stopAll()`
+
 Stops all flame animations.
 
 ```javascript

@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "m6x11plus";
+  src:
+  url("./fonts/m6x11plus.woff2") format('woff2'),
+  url("./fonts/m6x11plus.woff") format('woff');
+}
+
+* {
+  resize: none;
+}
+
+.font-balatro {
+  font-family: 'm6x11plus', monospace;
+  font-weight: auto;
+  font-style: auto;
+}
+
+.font-jetbrains {
+  font-family: "JetBrains Mono", Monospace;
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: normal;
+}
+.font-outfit {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: normal;
+}
+.text-sd {
+  text-shadow:
+    1px 1px 0 black,
+    1px 0 0 black,
+    0 1px 0 black;  
+}

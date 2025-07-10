@@ -1,0 +1,14 @@
+.sprite-container {
+  width: 35.5px;  /* 142 * 0.25 */
+  height: 47.5px; /* 190 * 0.25 */
+  overflow: hidden;
+}
+.joker-sprite {
+  width: 142px;
+  height: 190px;
+  transform: scale(1);
+  
+  background-image: url('assets/Jokers.png');
+  background-repeat: no-repeat;
+  background-size: 1420px 3040px;
+}

@@ -1,13 +1,13 @@
 {
   "name": "balatrobutton",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "Balatro animated flame element",
   "type": "module",
-  "main": "dist/balatro-shader.js",
-  "module": "dist/balatro-shader.js",
+  "main": "dist/balatrobutton.js",
+  "module": "dist/balatrobutton.js",
   "exports": {
-    "import": "./dist/balatro-shader.js",
-    "require": "./dist/balatro-shader.js"
+    "import": "./dist/balatrobutton.js",
+    "require": "./dist/balatrobutton.js"
   },
   "files": [
     "dist"
@@ -20,6 +20,8 @@
     "build": "npm run build:js && npm run build:css"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.11",
+    "balatrobutton": "^1.0.5",
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {

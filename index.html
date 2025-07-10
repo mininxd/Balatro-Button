@@ -2,24 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>WebGL2 Shader</title>
-  <style>@import "tailwindcss"</style>
+  <meta name="theme-color" content="#a12" />
+  <title>Balatro Button Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <style>   
+  @import "tailwindcss";  
+  </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body class="relative overflow-hidden bg-black">
+<body id="body" class="relative bg-black ">
   <canvas id="glcanvas" class="fixed inset-0 z-0 w-full h-full"></canvas>
 
 <!-- Content -->
-  <div class="relative z-[999] content p-4">
-    <div class="navbar">
-      <img width="32" src="https://www.playbalatro.com/assets/scanlines-CkHILBA5.png">
+  <div class="relative z-[999] content p-4 font-balatro text-white overflow-scroll">
+    <div id="navbar">
+      <div class="joker-sprite"></div>
     </div>
-    <img src="https://www.playbalatro.com/assets/logo2-C9SU2BrI.png">
-    <h1 class="text-2xl font-black text-white">
-    </h1>
-  </div>
+    <img id="balatroLogo" src="https://www.playbalatro.com/assets/logo2-C9SU2BrI.png">
+    <div class="text-center">
+      <button class="btn balatroBtn text-4xl">Balatro Button</button>
+    </div>
 
+
+
+<p class="text-2xl mt-24">
+ use with cdn
+</p>
+<div class="copy px-2 py-1 w-full h-[28px] shadow-2xl bg-indigo-900 font-jetbrains rounded overflow-y-hidden">
+  https://unpkg.com/balatrobutton@1.0.3/dist/balatro-shader.js
+</div>
+<span class="font-jetbrains text-gray-100 opacity-80">click to copy</span>
+
+
+<p class="text-2xl mt-4">
+ NPM
+</p>
+<div class="copy px-2 py-1 w-full h-[28px] shadow-2xl bg-indigo-900 font-jetbrains rounded overflow-y-hidden">
+  npm install balatrobutton
+</div>
+<span class="font-jetbrains text-gray-100 opacity-80">click to copy</span>
+
+
+<p class="mt-12 text-2xl">Quick Start:</p>
+<div class="mt-4 font-jetbrains text-sm leading-relaxed copy px-4 py-3 w-full bg-gray-900 text-green-300 rounded-xl shadow-lg">
+  <code>
+    import Balatro from "balatrobutton";<br>
+    const elementBtn = new Balatro();<br>
+    <br>
+    <span class="text-gray-100 opacity-80">// Available Options</span><br>
+    const ElementBtn = new Balatro({<br>
+    selector: '.className',     <span class="text-gray-100 opacity-80">// your element classes</span><br>
+    duration: 0,     <span class="text-gray-100 opacity-80">// flame duration, (default 0 = infinite)</span><br>
+    power : () => 500,    <span class="text-gray-100 opacity-80">// flame power</span><br>
+    score : 0,     <span class="text-gray-100 opacity-80">// Initial content (inside element)</span><br>
+    colorStart : "#f00",     <span class="text-gray-100 opacity-80">// Low power</span><br>
+    colorMid : "#f50",     <span class="text-gray-100 opacity-80">// Medium power</span><br>
+    colorEnd : "#ff0",     <span class="text-gray-100 opacity-80">// High power</span><br>
+    });
+  </code>
+</div>
+
+<p class="mt-4 text-2xl">Extra function :</p>
+<div class="mt-4 font-jetbrains text-sm leading-relaxed copy px-4 py-3 w-full bg-gray-900 text-green-300 rounded-xl shadow-lg">
+  <code>
+    import Balatro from "balatrobutton";<br>
+    const elementBtn = new Balatro();<br>
+    <br>
+    
+    <span class="text-gray-100 opacity-80">// Get fire colors</span><br>
+    console.log(elementBtn.getColors());<br>
+    <span class="text-gray-100 opacity-80">// Change Power</span><br>
+    elementBtn.setPower(5000);<br>
+    <span class="text-gray-100 opacity-80">// Change score</span><br>
+    elementBtn.setScore(5000);<br>
+    <span class="text-gray-100 opacity-80">// Stop animation</span><br>
+    elementBtn.stopAll();<br>
+  </code>
+</div>
+
+  
+  <p class="text-center p-5">
+    made with ❤️ </p>
+
+ </div>
   <script type="module" src="/docs/main.js"></script>
 </body>
 
-</html>
+</htmlang>

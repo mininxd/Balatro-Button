@@ -15,7 +15,7 @@ export default class FlameButton {
     textAlign = "center",
     colorStart = "#f00",
     colorMid = "#f50",
-    colorEnd = "ff0",
+    colorEnd = "#ff0",
   } = {}) {
     this.instances = []
 
@@ -76,6 +76,15 @@ export default class FlameButton {
     const newScore = currentScore + score
     instance.button.textContent = newScore
 
+    if (power !== undefined) {
+      instance.effect.power = power
+    }
+  }
+  
+  setPower(power) {
+    const instance = this.instances[0]
+    if (!instance) return
+    
     if (power !== undefined) {
       instance.effect.power = power
     }
