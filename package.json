@@ -1,20 +1,36 @@
 {
-  "name": "shader",
-  "private": true,
-  "version": "0.0.0",
+  "name": "balatrobutton",
+  "version": "1.0.2",
+  "description": "Balatro animated flame element",
   "type": "module",
+  "main": "dist/balatro-shader.js",
+  "module": "dist/balatro-shader.js",
+  "exports": {
+    "import": "./dist/balatro-shader.js",
+    "require": "./dist/balatro-shader.js"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "daisyui": "^5.0.46",
-    "vite": "^7.0.0"
+    "preview": "vite preview",
+    "build:js": "webpack --config webpack.config.js",
+    "build:css": "tailwindcss -i ./src/style.css -o ./dist/style.css --minify",
+    "build": "npm run build:js && npm run build:css"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.11",
-    "tailwindcss": "^4.1.11",
-    "vite-plugin-glsl": "^1.5.1"
+    "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "css-loader": "^7.1.2",
+    "raw-loader": "^4.0.2",
+    "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.14",
+    "vite": "^7.0.0",
+    "vite-plugin-glsl": "^1.5.1",
+    "webpack": "^5.100.0",
+    "webpack-cli": "^6.0.1"
   }
 }

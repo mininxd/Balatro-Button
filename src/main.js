@@ -1,5 +1,7 @@
 import flameEffect from './effect.js'
+
 import './style.css'
+
 import './fonts/m6x11plus.woff'
 import './fonts/m6x11plus.woff2'
 
@@ -10,9 +12,10 @@ export default class FlameButton {
     duration = 0,
     power = () => 500,
     score = 0,
-    colorStart = [1, 0, 0, 1],
-    colorMid = [1, 0.5, 0, 1],
-    colorEnd = [1, 1, 0, 1],
+    textAlign = "center",
+    colorStart = "#f00",
+    colorMid = "#f50",
+    colorEnd = "ff0",
   } = {}) {
     this.instances = []
 
@@ -31,7 +34,8 @@ export default class FlameButton {
         'text-2xl',
         'text-balatro',
         'text-white',
-        'text-sd'
+        'text-sd',
+        'text-right',
       )
       button.style.backgroundColor =  colorStart;
 
@@ -47,9 +51,9 @@ export default class FlameButton {
       origBtn.replaceWith(wrapper)
 
       const effect = flameEffect(canvas, power, duration, {
-        colorStart,
-        colorMid,
-        colorEnd,
+       colorStart: hexToVec4(colorStart),
+       colorMid: hexToVec4(colorMid),
+       colorEnd: hexToVec4(colorEnd),
       })
       effect.render()
 
