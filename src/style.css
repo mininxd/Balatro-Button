@@ -1,17 +1,3 @@
-@import "tailwindcss";
-
-.flame-canvas {
-  position: absolute;
-  transform: rotate(180deg) translateY(3.75em);
-  left: 0;
-  width: 100%;
-  height: 100px;
-  pointer-events: none;
-  background: transparent;
-  z-index: 0;
-}
-
-
 @font-face {
   font-family: "m6x11plus";
   src:
@@ -19,11 +5,27 @@
   url("./fonts/m6x11plus.woff") format('woff');
 }
 
-.text-balatro {
+* {
+  resize: none;
+}
+
+.font-balatro {
   font-family: 'm6x11plus', monospace;
-  font-weight: normal;
+  font-weight: auto;
+  font-style: auto;
+}
+
+.font-jetbrains {
+  font-family: "JetBrains Mono", Monospace;
+  font-optical-sizing: auto;
+  font-weight: auto;
   font-style: normal;
-  font-display: swap;
+}
+.font-outfit {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: normal;
 }
 .text-sd {
   text-shadow:
