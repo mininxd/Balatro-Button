@@ -16,7 +16,7 @@
     "preview": "vite preview",
     "build:js": "webpack --config webpack.config.js",
     "build:css": "tailwindcss -i ./src/style.css -o ./dist/style.css --minify",
-    "build": "npx vite build"
+    "build": "vite build"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
