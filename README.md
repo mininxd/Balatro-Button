@@ -21,9 +21,11 @@ npm install balatrobutton
 
 ```javascript
 import FlameButton from 'balatrobutton';
+import 'balatrobutton/style'; // required
 
 // Create flame effects for any buttons has "btn-flames" class
 const flameButtons = new FlameButton();
+
 
 // Or with custom options, and custom classes
 const flameButtons = new FlameButton({
@@ -96,11 +98,17 @@ const flames = new FlameButton({
   power: () => Math.random() * 1000
 });
 
-// Update score when player scores points
-function addScore(points) {
-  flames.setScore(points, points * 10);
+// Update score or number
+function scoreSet(points) {
+  flames.setScore(points);
+}
+
+// Update fire power
+function powerSet(power) {
+  flames.setPower(power);
 }
 ```
+
 
 ### Multiple Button Sets
 
