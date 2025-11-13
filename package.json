@@ -6,9 +6,9 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "exports": {
-  ".": "./dist/index.js",
-  "./style": "./dist/style.css"
-},
+    ".": "./dist/index.js",
+    "./style": "./dist/style.css"
+  },
   "files": [
     "dist"
   ],
@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
-    "balatrobutton": "^1.0.7",
+    "balatrobutton": "^1.1.1",
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {

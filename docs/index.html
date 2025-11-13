@@ -33,9 +33,9 @@
  use with cdn
 </p>
 <div class="copy px-2 py-1 w-full h-[28px] shadow-2xl bg-indigo-900 font-jetbrains rounded overflow-y-hidden">
-  https://unpkg.com/balatrobutton@1.0.3/dist/balatro-shader.js
+  https://unpkg.com/balatrobutton@latest/dist/balatro-shader.js
 </div>
-<span class="font-jetbrains text-gray-100 opacity-80">click to copy</span>
+<span class="font-jetbrains text-gray-100 opacity-50">click to copy</span>
 
 
 <p class="text-2xl mt-6">
@@ -44,7 +44,7 @@
 <div class="copy px-2 py-1 w-full h-[28px] shadow-2xl bg-indigo-900 font-jetbrains rounded overflow-y-hidden">
   npm install balatrobutton
 </div>
-<span class="font-jetbrains text-gray-100 opacity-80">click to copy</span>
+<span class="font-jetbrains text-gray-100 opacity-50">click to copy</span>
 
 
 
@@ -52,18 +52,32 @@
 <div class="mt-4 font-jetbrains text-sm leading-relaxed copy px-4 py-3 w-full bg-gray-900 text-green-300 rounded-xl shadow-lg">
   <code>
     import Balatro from "balatrobutton";<br>
-    const elementBtn = new Balatro();<br>
+    const element = new Balatro(<span class="text-yellow-400">{options}</span>);<br>
     <br>
-    <span class="text-gray-100 opacity-80">// Available Options</span><br>
-    const ElementBtn = new Balatro({<br>
-    selector: '.className',     <span class="text-gray-100 opacity-80">// your element classes</span><br>
-    duration: 0,     <span class="text-gray-100 opacity-80">// flame duration, (default 0 = infinite)</span><br>
-    power : () => 500,    <span class="text-gray-100 opacity-80">// flame power</span><br>
-    score : 0,     <span class="text-gray-100 opacity-80">// Initial content</span><br>
-    colorStart : "#f00",     <span class="text-gray-100 opacity-80">// Low power</span><br>
-    colorMid : "#f50",     <span class="text-gray-100 opacity-80">// Medium power</span><br>
-    colorEnd : "#ff0",     <span class="text-gray-100 opacity-80">// High power</span><br>
-    });
+    <span class="text-gray-100 opacity-50">// Available Options</span><br>
+    {<br>
+    <span class="text-gray-100 opacity-50">// your element classes</span>
+      <br>
+    selector: '.className',    
+      <br>
+    <span class="text-gray-100 opacity-50">      // flame duration</span>
+    <br>
+    duration: 0,      <span class="text-gray-100 opacity-50">// 0 = infinite</span>
+      <br>
+    <span class="text-gray-100 opacity-50">// flame power</span><br>
+    power : () => 500,   
+    <br>
+    <span class="text-gray-100 opacity-50">// Initial content</span><br>
+    score : 0, 
+    <br>
+    <span class="text-gray-100 opacity-50">// Low power</span><br>
+    colorStart : "#f00",   
+    <br>
+    <span class="text-gray-100 opacity-50">// Medium power</span><br>
+    colorMid : "#f50",    <br>
+    <span class="text-gray-100 opacity-50">// High power</span><br>
+    colorEnd : "#ff0",    <br>
+    };
   </code>
 </div>
 
@@ -71,17 +85,17 @@
 <div class="mt-4 font-jetbrains text-sm leading-relaxed copy px-4 py-3 w-full bg-gray-900 text-green-300 rounded-xl shadow-lg">
   <code>
     import Balatro from "balatrobutton";<br>
-    const elementBtn = new Balatro();<br>
+    const element = new Balatro(<span class="text-yellow-400">{options}</span>);<br>
     <br>
     
-    <span class="text-gray-100 opacity-80">// Get fire colors</span><br>
-    console.log(elementBtn.getColors());<br>
-    <span class="text-gray-100 opacity-80">// Change power</span><br>
-    elementBtn.setPower(5000);<br>
-    <span class="text-gray-100 opacity-80">// Change score</span><br>
-    elementBtn.setScore(5000);<br>
-    <span class="text-gray-100 opacity-80">// Stop animation</span><br>
-    elementBtn.stopAll();<br>
+    <span class="text-gray-100 opacity-50">// Get fire colors</span><br>
+    console.log(element.getColors());<br>
+    <span class="text-gray-100 opacity-50">// Change power</span><br>
+    element.setPower(5000);<br>
+    <span class="text-gray-100 opacity-50">// Change score</span><br>
+    element.setScore(5000);<br>
+    <span class="text-gray-100 opacity-50">// Stop animation</span><br>
+    element.stopAll();<br>
   </code>
 </div>
 

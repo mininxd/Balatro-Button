@@ -1,4 +1,4 @@
-import fragSrc from './assets/shaders/background.fs?raw';
+import fragSrc from '/shaders/background.fs?url&raw';
 
 const canvas = document.createElement('canvas');
 canvas.id = 'glcanvas';

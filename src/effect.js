@@ -122,8 +122,15 @@ export default function flame(canvas, initialPowerFn, duration = 0, colors = {})
     gl.clearColor(0, 0, 0, 0)
     gl.clear(gl.COLOR_BUFFER_BIT)
 
-    const p = Math.min(_powerFn(), 7000)
+    let p = Math.min(_powerFn(), 7000)
+    const fadeDuration = 1000; // ms
+    if (duration > 0 && elapsed > duration) {
+      const timeSinceFadeStart = elapsed - duration;
+      const multiplier = Math.max(0.0, 1.0 - timeSinceFadeStart / fadeDuration);
+      p *= multiplier;
+    }
     const { colour1, colour2 } = getFlameColors(p)
+
 
     gl.useProgram(program)
     gl.bindVertexArray(vao)
@@ -138,7 +145,7 @@ export default function flame(canvas, initialPowerFn, duration = 0, colors = {})
 
     gl.drawArrays(gl.TRIANGLES, 0, 6)
 
-    if (duration === 0 || elapsed < duration) {
+    if (duration === 0 || elapsed < (duration + fadeDuration)) {
       frameId = requestAnimationFrame(draw)
     } else {
       stop()

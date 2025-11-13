@@ -20,15 +20,15 @@ npm install balatrobutton
 ```
 
 ```javascript
-import FlameButton from 'balatrobutton';
+import Balatro from 'balatrobutton';
 import 'balatrobutton/style'; // required
 
 // Create flame effects for any buttons has "btn-flames" class
-const flameButtons = new FlameButton();
+const flameButtons = new Balatro();
 
 
 // Or with custom options, and custom classes
-const flameButtons = new FlameButton({
+const flameButtons = new Balatro({
   selector: '.my-flame-buttons', // class
   colorStart: '#ff0000', // low power
   colorMid: '#ff5500',  // mid power
@@ -40,7 +40,7 @@ const flameButtons = new FlameButton({
 
 ### Constructor
 ```javascript
-new FlameButton(options)
+new Balatro(options)
 ```
 Creates flame effects for all elements with "btn-flame" class by default.
 
@@ -75,14 +75,14 @@ console.log(colors); // Array of color objects
 ### Basic Usage
 
 ```javascript
-import FlameButton from 'balatrobutton';
-const flames = new FlameButton();
+import Balatro from 'balatrobutton';
+const flames = new Balatro();
 ```
 
 ### Custom Colors
 
 ```javascript
-const flames = new FlameButton({
+const flames = new Balatro({
   selector: '.my-buttons',
   colorStart: '#4f46e5',  // Indigo
   colorMid: '#7c3aed',    // Purple
@@ -93,7 +93,7 @@ const flames = new FlameButton({
 ### Dynamic Score Updates
 
 ```javascript
-const flames = new FlameButton({
+const flames = new Balatro({
   score: 0,
   power: () => Math.random() * 1000
 });
@@ -114,13 +114,13 @@ function powerSet(power) {
 
 ```javascript
 // Create different flame effects for different button types
-const scoreButtons = new FlameButton({
+const scoreButtons = new Balatro({
   selector: '.score-btn',
   colorStart: '#22c55e',
   colorEnd: '#16a34a'
 });
 
-const multiplierButtons = new FlameButton({
+const multiplierButtons = new Balatro({
   selector: '.multiplier-btn',
   colorStart: '#f59e0b',
   colorEnd: '#d97706'
@@ -160,7 +160,7 @@ colorStart: 'rgba(255, 0, 0, 0.8)'
 The package also exports utility functions:
 
 ```javascript
-import FlameButton, { hexToVec4 } from 'balatrobutton';
+import Balatro, { hexToVec4 } from 'balatrobutton';
 
 // Convert hex/rgb to vec4 for WebGL
 const color = hexToVec4('#ff5500');
@@ -199,7 +199,7 @@ npm run build:css
 ```
 balatrobutton/
 ├── src/
-│   ├── main.js          # Main FlameButton class
+│   ├── main.js          # Main Balatro class
 │   ├── effect.js        # WebGL flame effect
 │   ├── style.css        # Styling
 │   ├── shaders/
