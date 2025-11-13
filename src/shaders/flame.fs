@@ -12,6 +12,7 @@ uniform vec4 colour_1;
 uniform vec4 colour_2;
 uniform float id;
 uniform sampler2D u_texture;
+uniform float power_multiplier;
 
 in vec2 v_texcoord;
 out vec4 fragColor;
@@ -78,4 +79,5 @@ void main() {
     }
 
     fragColor = ret_col;
+    fragColor.a *= power_multiplier;
 }

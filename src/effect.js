@@ -125,6 +125,11 @@ export default function flame(canvas, initialPowerFn, duration = 0, colors = {})
     const p = Math.min(_powerFn(), 7000)
     const { colour1, colour2 } = getFlameColors(p)
 
+    let powerMultiplier = 1.0
+    if (duration > 0) {
+      powerMultiplier = Math.max(0.0, 1.0 - elapsed / duration)
+    }
+
     gl.useProgram(program)
     gl.bindVertexArray(vao)
 
@@ -135,6 +140,7 @@ export default function flame(canvas, initialPowerFn, duration = 0, colors = {})
     gl.uniform4f(u('colour_1'), ...colour1)
     gl.uniform4f(u('colour_2'), ...colour2)
     gl.uniform1f(u('id'), 1)
+    gl.uniform1f(u('power_multiplier'), powerMultiplier)
 
     gl.drawArrays(gl.TRIANGLES, 0, 6)
 
