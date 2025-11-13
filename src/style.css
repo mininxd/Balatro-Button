@@ -9,6 +9,14 @@
   resize: none;
 }
 
+::selection { 
+  background: #abd39b55;
+  color: #e8cc54;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
 .font-balatro {
   font-family: 'm6x11plus', monospace;
   font-weight: auto;

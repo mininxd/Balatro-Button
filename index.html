@@ -21,7 +21,7 @@
     <img id="balatroLogo" src="https://www.playbalatro.com/assets/logo2-C9SU2BrI.png">
     <div class="text-center">
       <button class="btn balatroBtn text-4xl">Balatro Button</button>
-      <p class="opacity-50">v1.1.1</p>
+      <p class="opacity-50">v1.2.0</p>
     </div>
 
 
@@ -35,7 +35,7 @@
 <div class="copy px-2 py-1 w-full h-[28px] shadow-2xl bg-indigo-900 font-jetbrains rounded overflow-y-hidden">
   https://unpkg.com/balatrobutton@latest/dist/index.js
 </div>
-<span class="font-jetbrains text-gray-100 opacity-80">click to copy</span>
+<span class="font-jetbrains text-gray-100 opacity-50">click to copy</span>
 
 
 <p class="text-2xl mt-4">
@@ -44,53 +44,23 @@
 <div class="copy px-2 py-1 w-full h-[28px] shadow-2xl bg-indigo-900 font-jetbrains rounded overflow-y-hidden">
   npm install balatrobutton
 </div>
-<span class="font-jetbrains text-gray-100 opacity-80">click to copy</span>
+<span class="font-jetbrains text-gray-100 opacity-50">click to copy</span>
 
 
 
 <p class="mt-12 text-2xl">Quick Start:</p>
-<div class="mt-4 font-jetbrains text-sm leading-relaxed copy px-4 py-3 w-full bg-gray-900 text-green-300 rounded-xl shadow-lg">
-  <code>
-    import Balatro from "balatrobutton";<br>
-    import "balatrobutton/style";     <span class="text-gray-100 opacity-80">// required for styled font</span><br>
-    const elementBtn = new Balatro();<br>
-    <br>
-    <span class="text-gray-100 opacity-80">// Available Options</span><br>
-    const ElementBtn = new Balatro({<br>
-    selector: '.className',     <span class="text-gray-100 opacity-80">// your element classes</span><br>
-    power : () => 500,    <span class="text-gray-100 opacity-80">// flame power</span><br>
-    score : 0,     <span class="text-gray-100 opacity-80">// Initial content</span><br>
-    colorStart : "#f00",     <span class="text-gray-100 opacity-80">// Low power</span><br>
-    colorMid : "#f50",     <span class="text-gray-100 opacity-80">// Medium power</span><br>
-    colorEnd : "#ff0",     <span class="text-gray-100 opacity-80">// High power</span><br>
-    });
-  </code>
+<div class="mt-4 font-jetbrains text-sm leading-relaxed copy px-4 py-3 w-full bg-gray-900 rounded-xl shadow-lg overflow-x-scroll">
+  <code id="quickStartCode"></code>
 </div>
 
 <p class="mt-4 text-2xl">Extra function :</p>
-<div class="mt-4 font-jetbrains text-sm leading-relaxed copy px-4 py-3 w-full bg-gray-900 text-green-300 rounded-xl shadow-lg">
-  <code>
-    <span class="text-gray-100 opacity-80">// Get fire colors</span><br>
-    console.log(elementBtn.getColors());<br>
-    <span class="text-gray-100 opacity-80">// Change power</span><br>
-    elementBtn.setPower(5000);<br>
-    <span class="text-gray-100 opacity-80">// Change score</span><br>
-    elementBtn.setScore(5000);<br>
-    <span class="text-gray-100 opacity-80">// Stop animation</span><br>
-    elementBtn.stopAll();<br>
-  </code>
+<div class="mt-4 font-jetbrains text-sm leading-relaxed copy px-4 py-3 w-full bg-gray-900 rounded-xl shadow-lg">
+  <code id="moreCode"></code>
 </div>
 
 <p class="mt-4 text-2xl">CDN Usage :</p>
-<div class="mt-4 font-jetbrains text-sm leading-relaxed copy px-4 py-3 w-full bg-gray-900 text-green-300 rounded-xl shadow-lg overflow-scroll">
-  <code>
-    <br>
-    import Balatro from "https://unpkg.com/balatrobutton@latest/dist/index.js"
-    <br>
-    import "https://unpkg.com/balatrobutton@latest/dist/style.css"
-    
-
-  </code>
+<div class="mt-4 font-jetbrains text-sm leading-relaxed copy px-4 py-3 w-full bg-gray-900 rounded-xl shadow-lg overflow-scroll">
+  <code id="cdnCode"></code>
   </div>
   
   <p class="text-center p-5">
