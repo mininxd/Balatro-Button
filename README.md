@@ -34,7 +34,8 @@ const flameButtons = new Balatro({
   colorMid: '#ff5500',  // mid power
   colorEnd: '#ffff00', // high power
   power: () => 750, // power that trigger fire
-  score: 100 // number text content
+  score: 100, // number text content
+  gpu: true // enables hardware acceleration (default: false)
 });
 ```
 
@@ -43,6 +44,19 @@ const flameButtons = new Balatro({
 new Balatro(options)
 ```
 Creates flame effects for all elements with "btn-flame" class by default.
+
+### Options
+| Option      | Type      | Default | Description |
+|-------------|-----------|---------|-------------|
+| `selector`  | `string`  | `'.btn-flame'` | CSS selector for elements to apply flame effect |
+| `duration`  | `number`  | `0` | Duration of flame effect in milliseconds (0 = infinite) |
+| `power`     | `function` or `number` | `() => 500` | Function returning power value or static number |
+| `score`     | `number`  | `0` | Initial score/number text content |
+| `textAlign` | `string`  | `'center'` | Text alignment for button content |
+| `colorStart`| `string`  | `'#f00'` | Color for low power state (hex, rgb, or rgba) |
+| `colorMid`  | `string`  | `'#f50'` | Color for mid power state |
+| `colorEnd`  | `string`  | `'#ff0'` | Color for high power state |
+| `gpu`       | `boolean` | `false` | Enable hardware acceleration for rendering |
 
 ### Methods
 

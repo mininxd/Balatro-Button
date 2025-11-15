@@ -13,6 +13,8 @@ export default class FlameButton {
     colorStart = '#f00',
     colorMid = '#f50',
     colorEnd = '#ff0',
+    gpu = false,
+    webgpu = false,
   } = {}) {
     this.options = {
       selector,
@@ -23,6 +25,8 @@ export default class FlameButton {
       colorStart,
       colorMid,
       colorEnd,
+      gpu,
+      webgpu,
     };
 
     this.instances = [];
@@ -79,6 +83,8 @@ export default class FlameButton {
         colorStart: hexToVec4(colorStart),
         colorMid: hexToVec4(colorMid),
         colorEnd: hexToVec4(colorEnd),
+        gpu: this.options.gpu,
+        webgpu: this.options.webgpu,
       });
       effect.render();
 

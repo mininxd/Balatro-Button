@@ -1,13 +1,25 @@
 {
   "name": "balatrobutton",
-  "version": "1.2",
+  "version": "1.2.0",
   "description": "Balatro animated flame element",
+  "homepage": "https://github.com/mininxd/Balatro-Button#readme",
+  "bugs": {
+    "url": "https://github.com/mininxd/Balatro-Button/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mininxd/Balatro-Button.git"
+  },
+  "license": "ISC",
+  "author": "miminxd",
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
   "exports": {
     ".": "./dist/index.js",
     "./style": "./dist/style.css"
+  },
+  "main": "dist/index.js",
+  "directories": {
+    "doc": "docs"
   },
   "files": [
     "dist"
@@ -21,7 +33,6 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
-    "balatrobutton": "^1.1.1",
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
@@ -34,5 +45,6 @@
     "vite-plugin-glsl": "^1.5.1",
     "webpack": "^5.100.0",
     "webpack-cli": "^6.0.1"
-  }
+  },
+  "module": "dist/index.js"
 }

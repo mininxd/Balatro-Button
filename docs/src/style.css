@@ -1,12 +1,20 @@
 @font-face {
   font-family: "m6x11plus";
   src:
-  url("./fonts/m6x11plus.woff2") format('woff2'),
-  url("./fonts/m6x11plus.woff") format('woff');
+  url("../public/fonts/m6x11plus.woff2") format('woff2'),
+  url("../public/fonts/m6x11plus.woff") format('woff');
 }
 
 * {
   resize: none;
+}
+
+::selection { 
+  background: #4bd33955;
+  color: #e8cc54;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 .font-balatro {

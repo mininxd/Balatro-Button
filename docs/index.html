@@ -8,10 +8,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body id="body" class="relative bg-black ">
+<body id="body" class="relative bg-black">
   <canvas id="glcanvas" class="fixed inset-0 z-0 w-full h-full"></canvas>
 
 <!-- Content -->
@@ -22,23 +21,24 @@
     <img id="balatroLogo" src="https://www.playbalatro.com/assets/logo2-C9SU2BrI.png">
     <div class="text-center">
       <button class="btn balatroBtn text-4xl">Balatro Button</button>
+      <p class="opacity-50">v1.2.0</p>
     </div>
 
 
 <div class="bg-[#00b4] mt-6 text-2xl flex justify-center gap-2">
-  TailwindCSS Required!
+  <a target="_blank" class="underline underline-offset-4" href="https://tailwindcss.com/">TailwindCSS</a> Required!
 </div>
 
-<p class="text-2xl mt-24">
+<p class="text-2xl mt-12">
  use with cdn
 </p>
 <div class="copy px-2 py-1 w-full h-[28px] shadow-2xl bg-indigo-900 font-jetbrains rounded overflow-y-hidden">
-  https://unpkg.com/balatrobutton@latest/dist/balatro-shader.js
+  https://unpkg.com/balatrobutton@latest/dist/index.js
 </div>
 <span class="font-jetbrains text-gray-100 opacity-50">click to copy</span>
 
 
-<p class="text-2xl mt-6">
+<p class="text-2xl mt-4">
  NPM
 </p>
 <div class="copy px-2 py-1 w-full h-[28px] shadow-2xl bg-indigo-900 font-jetbrains rounded overflow-y-hidden">
@@ -49,62 +49,25 @@
 
 
 <p class="mt-12 text-2xl">Quick Start:</p>
-<div class="mt-4 font-jetbrains text-sm leading-relaxed copy px-4 py-3 w-full bg-gray-900 text-green-300 rounded-xl shadow-lg">
-  <code>
-    import Balatro from "balatrobutton";<br>
-    const element = new Balatro(<span class="text-yellow-400">{options}</span>);<br>
-    <br>
-    <span class="text-gray-100 opacity-50">// Available Options</span><br>
-    {<br>
-    <span class="text-gray-100 opacity-50">// your element classes</span>
-      <br>
-    selector: '.className',    
-      <br>
-    <span class="text-gray-100 opacity-50">      // flame duration</span>
-    <br>
-    duration: 0,      <span class="text-gray-100 opacity-50">// 0 = infinite</span>
-      <br>
-    <span class="text-gray-100 opacity-50">// flame power</span><br>
-    power : () => 500,   
-    <br>
-    <span class="text-gray-100 opacity-50">// Initial content</span><br>
-    score : 0, 
-    <br>
-    <span class="text-gray-100 opacity-50">// Low power</span><br>
-    colorStart : "#f00",   
-    <br>
-    <span class="text-gray-100 opacity-50">// Medium power</span><br>
-    colorMid : "#f50",    <br>
-    <span class="text-gray-100 opacity-50">// High power</span><br>
-    colorEnd : "#ff0",    <br>
-    };
-  </code>
+<div class="mt-4 font-jetbrains text-sm leading-relaxed copy px-4 py-3 w-full bg-gray-900 rounded-xl shadow-lg overflow-x-scroll">
+  <code id="quickStartCode"></code>
 </div>
 
 <p class="mt-4 text-2xl">Extra function :</p>
-<div class="mt-4 font-jetbrains text-sm leading-relaxed copy px-4 py-3 w-full bg-gray-900 text-green-300 rounded-xl shadow-lg">
-  <code>
-    import Balatro from "balatrobutton";<br>
-    const element = new Balatro(<span class="text-yellow-400">{options}</span>);<br>
-    <br>
-    
-    <span class="text-gray-100 opacity-50">// Get fire colors</span><br>
-    console.log(element.getColors());<br>
-    <span class="text-gray-100 opacity-50">// Change power</span><br>
-    element.setPower(5000);<br>
-    <span class="text-gray-100 opacity-50">// Change score</span><br>
-    element.setScore(5000);<br>
-    <span class="text-gray-100 opacity-50">// Stop animation</span><br>
-    element.stopAll();<br>
-  </code>
+<div class="mt-4 font-jetbrains text-sm leading-relaxed copy px-4 py-3 w-full bg-gray-900 rounded-xl shadow-lg">
+  <code id="moreCode"></code>
 </div>
 
+<p class="mt-4 text-2xl">CDN Usage :</p>
+<div class="mt-4 font-jetbrains text-sm leading-relaxed copy px-4 py-3 w-full bg-gray-900 rounded-xl shadow-lg overflow-scroll">
+  <code id="cdnCode"></code>
+  </div>
   
   <p class="text-center p-5">
     made with ❤️ </p>
 
  </div>
-  <script type="module" src="/main.js"></script>
+  <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>

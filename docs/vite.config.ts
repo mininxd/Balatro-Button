@@ -3,16 +3,10 @@ import glsl from 'vite-plugin-glsl'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  root: 'docs',
-  base: './',
-  publicDir: 'assets',
   plugins: [glsl(), tailwindcss()],
-  build: {
-    outDir: '../dist'
-  },
   server: {
     fs: {
-      allow: ['..'] // Allow serving files from parent directory
+      allow: ['..', '../..'] // Allow serving files from parent and grandparent directories
     }
   }
 })
