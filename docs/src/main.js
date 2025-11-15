@@ -5,15 +5,15 @@ import code from "./code.js";
 import Balatro from "../../dist/index.js";
 function hex() {
   const hex = () => Math.floor(Math.random() * 256)
-                      .toString(16)
-                      .padStart(2, "0");
+          .toString(16)
+          .padStart(2, "0");
   return `#${hex()}${hex()}${hex()}`;
 }
 const hex1 = hex();
 const hex2 = hex();
 const hex3 = hex();
 
-const balatroBtn = new Balatro ({
+const balatroBtn = new Balatro({
   selector: '.balatroBtn',
   power: () =>  0,
   colorStart : hex1,
@@ -62,14 +62,14 @@ const element = new Balatro({options});
   duration: 0, // 0 = infinite
   // flame power
   power: () => 500,
-  // Initial content
-  score: 0,
+  // GPU render 
+  gpu: false, 
   // Low power
   colorStart: "#f00",
   // Medium power
   colorMid: "#f50",
   // High power
-  colorEnd: "#ff0",
+  colorEnd: "#ff0"
 };`);
 
 moreCode.innerHTML = code(`// Get fire colors

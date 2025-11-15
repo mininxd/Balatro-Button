@@ -107,7 +107,8 @@ export default function flame(canvas, initialPowerFn, duration = 0, colors = {})
   const { gpu = false, webgpu = false, ...otherColors } = colors;
 
   // Try to use WebGPU if requested and available
-  if (webgpu && typeof navigator !== 'undefined' && navigator.gpu) {
+  // Prioritize WebGPU when either webgpu: true OR gpu: true is set
+  if ((webgpu || gpu) && typeof navigator !== 'undefined' && navigator.gpu) {
     return createWebGPUEffect(canvas, initialPowerFn, duration, otherColors);
   } else {
     return createWebGLEffect(canvas, initialPowerFn, duration, otherColors);

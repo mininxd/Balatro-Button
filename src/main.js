@@ -79,12 +79,13 @@ export default class FlameButton {
       wrapper.appendChild(button);
       origBtn.replaceWith(wrapper);
 
+      // If gpu is true, also set webgpu to true to prioritize WebGPU
       const effect = flameEffect(canvas, power, duration, {
         colorStart: hexToVec4(colorStart),
         colorMid: hexToVec4(colorMid),
         colorEnd: hexToVec4(colorEnd),
         gpu: this.options.gpu,
-        webgpu: this.options.webgpu,
+        webgpu: this.options.webgpu || this.options.gpu, // Use WebGPU when either webgpu or gpu is true
       });
       effect.render();
 
