@@ -3,7 +3,8 @@
 const KEYWORDS = new Set([
   "const", "let", "var", "import", "from", "return",
   "new", "function", "class", "if", "else", "for", "while",
-  "async", "await", "switch", "case", "break", "continue"
+  "async", "await", "switch", "case", "break", "continue",
+  "true", "false"
 ]);
 
 function wrap(type, text) {
